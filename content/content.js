@@ -1,5 +1,5 @@
 // Content script for page interaction
-class PrivacyBlitzContent {
+class DataVoidContent {
   constructor() {
     this.init();
   }
@@ -47,15 +47,15 @@ class PrivacyBlitzContent {
       
       if (inputs.length >= 2) {
         // This looks like a login/signup form
-        this.addPrivacyBlitzIndicator(form);
+        this.addDataVoidIndicator(form);
       }
     });
   }
 
-  addPrivacyBlitzIndicator(element) {
+  addDataVoidIndicator(element) {
     const indicator = document.createElement('div');
-    indicator.className = 'privacyblitz-indicator';
-    indicator.innerHTML = '⚡ PrivacyBlitz detected account page';
+    indicator.className = 'datavoid-indicator';
+    indicator.innerHTML = '⚡ DataVoid detected account page';
     indicator.style.cssText = `
       position: fixed;
       top: 10px;
@@ -113,4 +113,4 @@ class PrivacyBlitzContent {
 }
 
 // Initialize content script
-new PrivacyBlitzContent();
+new DataVoidContent();

@@ -1,5 +1,5 @@
-// PrivacyBlitz Popup - Production Ready
-class PrivacyBlitzPopup {
+// DataVoid Popup - Production Ready
+class DataVoidPopup {
   constructor() {
     this.scanBtn = document.getElementById('scanBtn');
     this.loading = document.getElementById('loading');
@@ -710,8 +710,8 @@ class PrivacyBlitzPopup {
       // Show confirmation dialog explaining what will happen
       const hasDirectLink = deletionInfo && deletionInfo.url && this.deletionDB;
       const message = hasDirectLink
-        ? `PrivacyBlitz will open the account deletion page for ${domain}.\n\nYou'll need to:\n1. Log into your account\n2. Follow the deletion process\n3. Confirm the deletion\n\nNote: PrivacyBlitz cannot delete accounts automatically for security reasons.`
-        : `PrivacyBlitz will search for deletion instructions for ${domain}.\n\nYou'll need to:\n1. Follow the instructions found\n2. Log into your account\n3. Manually delete the account\n\nNote: PrivacyBlitz cannot delete accounts automatically for security reasons.`;
+        ? `DataVoid will open the account deletion page for ${domain}.\n\nYou'll need to:\n1. Log into your account\n2. Follow the deletion process\n3. Confirm the deletion\n\nNote: DataVoid cannot delete accounts automatically for security reasons.`
+        : `DataVoid will search for deletion instructions for ${domain}.\n\nYou'll need to:\n1. Follow the instructions found\n2. Log into your account\n3. Manually delete the account\n\nNote: DataVoid cannot delete accounts automatically for security reasons.`;
       
       if (confirm(message)) {
         let url;
@@ -811,7 +811,7 @@ class PrivacyBlitzPopup {
     
     const a = document.createElement('a');
     a.href = url;
-    a.download = `privacyblitz-accounts-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `datavoid-accounts-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     
     URL.revokeObjectURL(url);
@@ -977,7 +977,7 @@ Best regards,
     const guide = `🔒 PRIVACY PROTECTION GUIDE
 
 📋 STEP 1: Audit Your Accounts
-• Use PrivacyBlitz to scan for old accounts
+• Use DataVoid to scan for old accounts
 • Review each account and decide if you still need it
 • Check what data each service has about you
 
@@ -997,7 +997,7 @@ Best regards,
 • Review privacy settings regularly
 
 ⚡ STEP 5: Regular Maintenance
-• Run PrivacyBlitz monthly
+• Run DataVoid monthly
 • Delete new unused accounts promptly
 • Keep your digital footprint minimal
 
@@ -1130,8 +1130,8 @@ Best regards,
 // Initialize popup when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    new PrivacyBlitzPopup();
+    new DataVoidPopup();
   });
 } else {
-new PrivacyBlitzPopup();
+  new DataVoidPopup();
 }

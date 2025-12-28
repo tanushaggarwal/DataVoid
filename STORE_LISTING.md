@@ -5,9 +5,9 @@ Discover forgotten accounts and reclaim your digital privacy. Find & delete old 
 
 ## Full Description
 
-**PrivacyBlitz - Find & Delete Old Accounts**
+**DataVoid - Find & Delete Old Accounts**
 
-Take control of your digital privacy with PrivacyBlitz, the powerful Chrome extension that helps you discover and delete forgotten accounts across the web.
+Take control of your digital privacy with DataVoid, the powerful Chrome extension that helps you discover and delete forgotten accounts across the web.
 
 ### 🔍 Key Features
 
@@ -66,7 +66,7 @@ Take control of your digital privacy with PrivacyBlitz, the powerful Chrome exte
 
 ### 🚀 Get Started
 
-1. Install PrivacyBlitz
+1. Install DataVoid
 2. Click the extension icon
 3. Click "Scan for Old Accounts"
 4. Review and manage your accounts
@@ -88,7 +88,7 @@ Need help? Check out:
 
 ---
 
-**PrivacyBlitz** - Reclaim your digital privacy, one account at a time. ⚡
+**DataVoid** - Reclaim your digital privacy, one account at a time. ⚡
 
 ## Category
 Productivity
@@ -109,7 +109,7 @@ Create the following screenshots (1280x800 or 640x400):
 ## Promotional Images
 
 ### Small Promotional Tile (440x280)
-- Show PrivacyBlitz logo with tagline "Find & Delete Old Accounts"
+- Show DataVoid logo with tagline "Find & Delete Old Accounts"
 - Dark theme with purple/blue gradient
 - Lightning bolt icon
 
@@ -121,7 +121,7 @@ Create the following screenshots (1280x800 or 640x400):
 ## Privacy Practices
 
 ### Single Purpose
-PrivacyBlitz has a single purpose: to help users discover and delete old accounts to improve their digital privacy.
+DataVoid has a single purpose: to help users discover and delete old accounts to improve their digital privacy.
 
 ### Host Permissions Justification
 We request `<all_urls>` permission to:

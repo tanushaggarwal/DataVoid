@@ -1,7 +1,7 @@
 # GitHub Repository Setup - Step by Step
 
 ## 🎯 Goal
-Create a GitHub repository named `datavoid` and push your PrivacyBlitz code to it.
+Create a GitHub repository named `datavoid` and push your DataVoid code to it.
 
 ---
 

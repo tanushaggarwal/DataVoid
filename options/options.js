@@ -1,5 +1,5 @@
 // Options page JavaScript
-class PrivacyBlitzOptions {
+class DataVoidOptions {
   constructor() {
     this.defaultSettings = {
       scanDepth: '90',
@@ -166,7 +166,7 @@ class PrivacyBlitzOptions {
     
     const a = document.createElement('a');
     a.href = url;
-    a.download = `privacyblitz-data-${new Date().toISOString().split('T')[0]}.json`;
+      a.download = `datavoid-data-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     
     URL.revokeObjectURL(url);
@@ -174,7 +174,7 @@ class PrivacyBlitzOptions {
   }
 
   async clearData() {
-    if (confirm('Are you sure you want to clear all PrivacyBlitz data? This cannot be undone.')) {
+      if (confirm('Are you sure you want to clear all DataVoid data? This cannot be undone.')) {
       await chrome.storage.local.clear();
       this.loadTemplates();
       this.showMessage('All data cleared successfully!', 'success');
@@ -203,4 +203,4 @@ class PrivacyBlitzOptions {
 }
 
 // Initialize options page
-const options = new PrivacyBlitzOptions();
+const options = new DataVoidOptions();

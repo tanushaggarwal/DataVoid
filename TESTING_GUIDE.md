@@ -1,4 +1,4 @@
-# Testing PrivacyBlitz on macOS
+# Testing DataVoid on macOS
 
 ## Quick Start - Load Extension in Chrome
 
@@ -19,16 +19,16 @@
    - Click **"Select"** or **"Open"**
 
 ### Step 4: Verify Installation
-- You should see **"PrivacyBlitz - Find & Delete Old Accounts"** in your extensions list
+- You should see **"DataVoid - Find & Delete Old Accounts"** in your extensions list
 - The extension icon should appear in your Chrome toolbar
-- If you don't see it, click the **puzzle piece icon** (🧩) in the toolbar and pin PrivacyBlitz
+- If you don't see it, click the **puzzle piece icon** (🧩) in the toolbar and pin DataVoid
 
 ## Testing the Extension
 
 ### Test 1: Open the Popup
-1. Click the **PrivacyBlitz icon** (⚡) in your Chrome toolbar
+1. Click the **DataVoid icon** (⚡) in your Chrome toolbar
 2. You should see the popup with:
-   - "⚡ PrivacyBlitz" header
+   - "⚡ DataVoid" header
    - "🔍 Scan for Old Accounts" button
    - Dark gradient background
 
@@ -67,7 +67,7 @@
 4. Click **⚙️ Settings** - Should open options page
 
 ### Test 7: Test Options Page
-1. Right-click the PrivacyBlitz icon
+1. Right-click the DataVoid icon
 2. Select **"Options"**
 3. Should open options page with settings
 4. Try changing settings and saving
@@ -91,9 +91,9 @@
 - Try scanning again
 
 ### Popup Not Working
-- **Reload the extension**: Go to `chrome://extensions/`, find PrivacyBlitz, click the refresh icon (🔄)
+- **Reload the extension**: Go to `chrome://extensions/`, find DataVoid, click the refresh icon (🔄)
 - **Check for errors**: Right-click the extension icon → "Inspect popup" → Check Console tab for errors
-- **Check background script**: Go to `chrome://extensions/` → Click "service worker" link under PrivacyBlitz → Check for errors
+- **Check background script**: Go to `chrome://extensions/` → Click "service worker" link under DataVoid → Check for errors
 
 ### Search Not Working
 - Make sure you've run a scan first
@@ -108,13 +108,13 @@
 ## Debugging Tips
 
 ### View Popup Console
-1. Right-click the PrivacyBlitz icon
+1. Right-click the DataVoid icon
 2. Select **"Inspect popup"**
 3. Console tab shows JavaScript errors
 
 ### View Background Script Console
 1. Go to `chrome://extensions/`
-2. Find PrivacyBlitz
+2. Find DataVoid
 3. Click **"service worker"** link
 4. Console shows background script errors
 
@@ -122,7 +122,7 @@
 1. Open any webpage
 2. Press **F12** to open DevTools
 3. Go to **Console** tab
-4. Look for PrivacyBlitz-related messages
+4. Look for DataVoid-related messages
 
 ### Check Extension Storage
 1. Open DevTools (F12)
@@ -134,7 +134,7 @@
 
 After making code changes:
 1. Go to `chrome://extensions/`
-2. Find **PrivacyBlitz**
+2. Find **DataVoid**
 3. Click the **refresh icon** (🔄) to reload
 4. Test again
 
@@ -146,7 +146,7 @@ After making code changes:
 
 ### Permission Errors
 - Go to `chrome://extensions/`
-- Find PrivacyBlitz
+- Find DataVoid
 - Make sure all permissions are granted
 - If not, click "Details" and grant permissions
 

@@ -1,8 +1,8 @@
-# PrivacyBlitz - Features & Roadmap
+# DataVoid - Features & Roadmap
 
 ## 🎯 Quick Summary
 
-**Current Status:** ✅ Extension is already named **PrivacyBlitz** throughout the codebase. No renaming needed!
+**Current Status:** ✅ Extension is named **DataVoid** throughout the codebase.
 
 **What's Done:**
 - ✅ Core account detection from browser history
@@ -312,7 +312,7 @@
 
 ## 📝 Notes
 
-- Extension name is already **PrivacyBlitz** - no changes needed
+- Extension name is **DataVoid**
 - Focus on polish and testing before adding new features
 - Start with MVP, iterate based on user feedback
 - Consider open-sourcing to build community

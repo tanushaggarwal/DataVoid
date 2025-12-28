@@ -1,16 +1,16 @@
-# PrivacyBlitz Privacy Policy
+# DataVoid Privacy Policy
 
 **Last Updated:** December 2024
 
 ## Introduction
 
-PrivacyBlitz ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use the PrivacyBlitz Chrome extension.
+DataVoid ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use the DataVoid Chrome extension.
 
 ## Data Collection
 
 ### What We Collect
 
-PrivacyBlitz processes data **locally on your device only**. We do not collect, transmit, or store any personal information on external servers.
+DataVoid processes data **locally on your device only**. We do not collect, transmit, or store any personal information on external servers.
 
 The extension accesses the following data types:
 
@@ -44,7 +44,7 @@ All data processing happens **locally in your browser**:
 
 ## Permissions
 
-PrivacyBlitz requires the following permissions:
+DataVoid requires the following permissions:
 
 - **`storage`**: To save scan results and settings locally
 - **`history`**: To scan browser history for account-related pages
@@ -57,7 +57,7 @@ These permissions are necessary for the extension's core functionality. We do no
 
 ## Third-Party Services
 
-PrivacyBlitz does not integrate with any third-party services. All processing happens locally in your browser.
+DataVoid does not integrate with any third-party services. All processing happens locally in your browser.
 
 ## Data Security
 
@@ -77,7 +77,7 @@ You have the following rights regarding your data:
 
 ## Children's Privacy
 
-PrivacyBlitz is not intended for users under the age of 13. We do not knowingly collect information from children.
+DataVoid is not intended for users under the age of 13. We do not knowingly collect information from children.
 
 ## Changes to This Policy
 
@@ -91,7 +91,7 @@ If you have questions about this Privacy Policy, please contact us through:
 
 ## Compliance
 
-PrivacyBlitz is designed to comply with:
+DataVoid is designed to comply with:
 - **GDPR** (General Data Protection Regulation)
 - **CCPA** (California Consumer Privacy Act)
 - **Chrome Web Store Policies**
@@ -104,9 +104,9 @@ PrivacyBlitz is designed to comply with:
 
 ## Open Source
 
-PrivacyBlitz is open source. You can review the source code to verify our privacy practices.
+DataVoid is open source. You can review the source code to verify our privacy practices.
 
 ---
 
-**By using PrivacyBlitz, you agree to this Privacy Policy.**
+**By using DataVoid, you agree to this Privacy Policy.**
 

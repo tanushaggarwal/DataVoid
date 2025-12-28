@@ -1,4 +1,4 @@
-# PrivacyBlitz - Feature Improvements & Additions
+# DataVoid - Feature Improvements & Additions
 
 ## 🎯 Quick Wins (Easy to Add, High Impact)
 

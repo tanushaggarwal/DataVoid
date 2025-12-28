@@ -1,12 +1,12 @@
-# Contributing to PrivacyBlitz
+# Contributing to DataVoid
 
-Thank you for your interest in contributing to PrivacyBlitz! 🎉
+Thank you for your interest in contributing to DataVoid! 🎉
 
 ## How to Contribute
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in [Issues](https://github.com/yourusername/privacyblitz/issues)
+1. Check if the bug has already been reported in [Issues](https://github.com/yourusername/datavoid/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce
@@ -15,7 +15,7 @@ Thank you for your interest in contributing to PrivacyBlitz! 🎉
 
 ### Suggesting Features
 
-1. Check existing [Issues](https://github.com/yourusername/privacyblitz/issues) and [Roadmap](README.md#roadmap)
+1. Check existing [Issues](https://github.com/yourusername/datavoid/issues) and [Roadmap](README.md#roadmap)
 2. Create a new issue with:
    - Clear description of the feature
    - Use case and benefits
@@ -82,5 +82,5 @@ Before submitting:
 
 Feel free to open an issue or discussion for any questions!
 
-Thank you for contributing to PrivacyBlitz! ⚡
+Thank you for contributing to DataVoid! ⚡
 

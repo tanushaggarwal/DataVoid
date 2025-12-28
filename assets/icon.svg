@@ -9,7 +9,7 @@
   <!-- Background circle -->
   <circle cx="64" cy="64" r="60" fill="url(#grad1)" stroke="#fff" stroke-width="4"/>
   
-  <!-- Lightning bolt for PrivacyBlitz -->
+  <!-- Lightning bolt for DataVoid -->
   <path d="M 45 35 L 65 35 L 55 55 L 75 55 L 50 95 L 60 75 L 40 75 Z" fill="#fff"/>
   
   <!-- Shield for privacy -->

@@ -1,4 +1,4 @@
-# PrivacyBlitz Chrome Extension - Installation Guide
+# DataVoid Chrome Extension - Installation Guide
 
 ## Quick Start
 
@@ -28,20 +28,20 @@ The extension requires PNG icon files. You have two options:
 
 3. **Load the Extension**
    - Click "Load unpacked"
-   - Select the PrivacyBlitz folder
+   - Select the DataVoid folder
    - The extension should appear in your extensions list
 
 4. **Pin the Extension**
    - Click the puzzle piece icon in Chrome toolbar
-   - Find "PrivacyBlitz" and click the pin icon
-   - The PrivacyBlitz icon will appear in your toolbar
+   - Find "DataVoid" and click the pin icon
+   - The DataVoid icon will appear in your toolbar
 
 ## Testing the Extension
 
 ### Basic Functionality Test
 
 1. **Open the Popup**
-   - Click the PrivacyBlitz icon in your toolbar
+   - Click the DataVoid icon in your toolbar
    - You should see the purple gradient interface
 
 2. **Test Account Scanning**
@@ -56,13 +56,13 @@ The extension requires PNG icon files. You have two options:
 ### Advanced Testing
 
 1. **Test Options Page**
-   - Right-click the PrivacyBlitz icon
+   - Right-click the DataVoid icon
    - Select "Options"
    - Configure settings and save
 
 2. **Test Content Script**
    - Visit a login page (e.g., `example.com/login`)
-   - Look for the PrivacyBlitz indicator in the top-right
+   - Look for the DataVoid indicator in the top-right
    - Click it to open the popup
 
 3. **Test Storage**
@@ -101,7 +101,7 @@ The extension requires PNG icon files. You have two options:
 ### Making Changes
 1. Edit any file in the extension
 2. Go to `chrome://extensions/`
-3. Click the refresh icon on the PrivacyBlitz extension
+3. Click the refresh icon on the DataVoid extension
 4. Test your changes
 
 ### Debugging
@@ -111,7 +111,7 @@ The extension requires PNG icon files. You have two options:
 
 2. **Background Script Debugging**:
    - Go to `chrome://extensions/`
-   - Click "service worker" link under PrivacyBlitz
+   - Click "service worker" link under DataVoid
    - Use Chrome DevTools to debug
 
 3. **Content Script Debugging**:
@@ -124,7 +124,7 @@ The extension requires PNG icon files. You have two options:
 Ensure your extension folder contains:
 
 ```
-PrivacyBlitz/
+DataVoid/
 ├── manifest.json          ✓
 ├── background.js          ✓
 ├── popup/

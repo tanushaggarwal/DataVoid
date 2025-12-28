@@ -1,4 +1,4 @@
-# ⚡ PrivacyBlitz
+# ⚡ DataVoid
 
 <div align="center">
 
@@ -21,7 +21,7 @@
 
 Research shows the average internet user maintains accounts across **80+ websites**, with **60% of these accounts becoming inactive** while still retaining personal data indefinitely. This creates significant privacy exposure and compliance challenges.
 
-**PrivacyBlitz solves this.**
+**DataVoid solves this.**
 
 ## ✨ Features
 
@@ -62,17 +62,17 @@ Research shows the average internet user maintains accounts across **80+ website
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/privacyblitz.git
-   cd privacyblitz
+   git clone https://github.com/yourusername/datavoid.git
+   cd datavoid
    ```
 
 2. **Load in Chrome**
    - Open Chrome and navigate to `chrome://extensions/`
    - Enable "Developer mode" (toggle in top right)
-   - Click "Load unpacked" and select the `privacyblitz` folder
+   - Click "Load unpacked" and select the `datavoid` folder
 
 3. **Start using**
-   - Click the PrivacyBlitz icon in your toolbar
+   - Click the DataVoid icon in your toolbar
    - Click "Scan for Old Accounts"
    - Review and manage your discovered accounts
 
@@ -96,7 +96,7 @@ Research shows the average internet user maintains accounts across **80+ website
 ## 📁 Project Structure
 
 ```
-privacyblitz/
+datavoid/
 ├── manifest.json              # Extension configuration
 ├── background.js             # Service worker for account detection
 ├── popup/                       # Extension popup interface
@@ -181,7 +181,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔒 Privacy Policy
 
-PrivacyBlitz is committed to your privacy. All processing happens locally on your device. No data is collected, transmitted, or stored on external servers.
+DataVoid is committed to your privacy. All processing happens locally on your device. No data is collected, transmitted, or stored on external servers.
 
 See [PRIVACY_POLICY.md](PRIVACY_POLICY.md) for complete details.
 
@@ -200,7 +200,7 @@ See [PRIVACY_POLICY.md](PRIVACY_POLICY.md) for complete details.
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/privacyblitz/issues)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/datavoid/issues)
 - **Documentation**: See [INSTALLATION.md](INSTALLATION.md)
 - **Questions**: Open a discussion on GitHub
 
@@ -214,10 +214,10 @@ See [PRIVACY_POLICY.md](PRIVACY_POLICY.md) for complete details.
 
 <div align="center">
 
-**PrivacyBlitz** - Reclaim your digital privacy, one account at a time. ⚡
+**DataVoid** - Reclaim your digital privacy, one account at a time. ⚡
 
 Made with ❤️ for privacy-conscious users
 
-[⭐ Star this repo](https://github.com/yourusername/privacyblitz) if you find it useful!
+[⭐ Star this repo](https://github.com/yourusername/datavoid) if you find it useful!
 
 </div>

@@ -1,12 +1,12 @@
-# LinkedIn Post Options for PrivacyBlitz
+# LinkedIn Post Options for DataVoid
 
 ## Option 1: Progress Update + Community Engagement (Recommended)
 
 **Post:**
 
-🚀 **PrivacyBlitz Update: We're Almost There!**
+🚀 **DataVoid Update: We're Almost There!**
 
-One month to launch, and PrivacyBlitz is feature-complete! Here's what we've built:
+One month to launch, and DataVoid is feature-complete! Here's what we've built:
 
 ✅ **Smart Account Detection** - Scans browser history to discover forgotten accounts
 ✅ **Account Categorization** - Auto-organizes by type (Social, Shopping, Work, Finance, etc.)
@@ -17,7 +17,7 @@ One month to launch, and PrivacyBlitz is feature-complete! Here's what we've bui
 
 **But here's where I need YOUR help:**
 
-As we finalize for launch, I want to make sure PrivacyBlitz solves real problems. 
+As we finalize for launch, I want to make sure DataVoid solves real problems. 
 
 **What's your biggest pain point with managing online accounts?**
 - Finding old accounts you forgot about?
@@ -37,9 +37,9 @@ Drop a comment or DM - your feedback will shape the final version!
 
 **Post:**
 
-🔧 **Building PrivacyBlitz: The Technical Journey**
+🔧 **Building DataVoid: The Technical Journey**
 
-With one month to launch, PrivacyBlitz is production-ready. Here's the tech stack:
+With one month to launch, DataVoid is production-ready. Here's the tech stack:
 
 **Architecture:**
 - Chrome Extension (Manifest V3)
@@ -85,7 +85,7 @@ Research shows the average user has 80+ online accounts, with 60% becoming inact
 - Deletion processes are scattered and complex
 - No way to track your digital footprint
 
-**The Solution: PrivacyBlitz**
+**The Solution: DataVoid**
 
 A Chrome extension that:
 🔍 Discovers all your accounts automatically
@@ -105,9 +105,9 @@ Comment below with your biggest account management challenge!
 
 **Post:**
 
-🎯 **PrivacyBlitz: One Month to Launch - Need Your Input!**
+🎯 **DataVoid: One Month to Launch - Need Your Input!**
 
-We're in the final stretch! PrivacyBlitz is feature-complete and ready for testing.
+We're in the final stretch! DataVoid is feature-complete and ready for testing.
 
 **What we've built:**
 - Automatic account discovery
@@ -122,7 +122,7 @@ We're in the final stretch! PrivacyBlitz is feature-complete and ready for testi
 2. **Feedback** - What's missing? What would make this essential for you?
 3. **Feature Requests** - What would you add?
 
-**The goal:** Make PrivacyBlitz the go-to tool for reclaiming your digital privacy.
+**The goal:** Make DataVoid the go-to tool for reclaiming your digital privacy.
 
 **Launching end of 2024.** Help us make it perfect! ⚡
 
@@ -134,7 +134,7 @@ We're in the final stretch! PrivacyBlitz is feature-complete and ready for testi
 
 **Post:**
 
-⚡ **PrivacyBlitz: One Month to Launch**
+⚡ **DataVoid: One Month to Launch**
 
 From concept to production-ready in record time. Here's what's shipping:
 

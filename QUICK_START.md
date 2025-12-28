@@ -104,7 +104,7 @@ git push
 Your repository will be live at:
 **`https://github.com/YOUR_USERNAME/datavoid`**
 
-**Note:** The extension is called "PrivacyBlitz" in the code, but your GitHub repo is named "DataVoid" - that's totally fine! Many projects have different repo names than product names.
+**Note:** The extension is called "DataVoid" throughout the codebase.
 
 ---
 

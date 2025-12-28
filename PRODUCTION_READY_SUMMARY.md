@@ -1,4 +1,4 @@
-# 🚀 PrivacyBlitz - Production Ready Summary
+# 🚀 DataVoid - Production Ready Summary
 
 ## ✅ Completed Features
 
@@ -76,7 +76,7 @@
 ## 📋 Remaining Tasks (Optional)
 
 ### Before Publishing
-1. **Update Privacy Policy URL** - Replace `https://github.com/yourusername/privacyblitz/blob/main/PRIVACY_POLICY.md` in manifest.json with your actual URL
+1. **Update Privacy Policy URL** - Replace `https://github.com/yourusername/datavoid/blob/main/PRIVACY_POLICY.md` in manifest.json with your actual URL
 2. **Create Screenshots** - Take 5 screenshots (1280x800) for store listing
 3. **Create Promotional Images** - Small (440x280) and Large (920x680) tiles
 4. **Test Thoroughly** - Test on multiple browsers, with various history sizes

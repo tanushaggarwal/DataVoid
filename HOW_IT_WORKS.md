@@ -1,8 +1,8 @@
-# How PrivacyBlitz Works
+# How DataVoid Works
 
-## ⚠️ Important: PrivacyBlitz Does NOT Auto-Delete Accounts
+## ⚠️ Important: DataVoid Does NOT Auto-Delete Accounts
 
-**PrivacyBlitz is a helper tool, not an automatic account deleter.**
+**DataVoid is a helper tool, not an automatic account deleter.**
 
 ### Why Can't It Auto-Delete?
 
@@ -13,7 +13,7 @@ Chrome extensions **cannot** automatically delete accounts because:
 3. **Confirmation**: Most sites require you to confirm deletion yourself
 4. **Legal**: Automatic deletion could violate terms of service
 
-### What PrivacyBlitz DOES Do
+### What DataVoid DOES Do
 
 ✅ **Discovers Accounts**: Scans your browser history to find accounts you've created  
 ✅ **Shows Deletion Guides**: Opens direct links to deletion pages (when available)  
@@ -54,7 +54,7 @@ This is the **correct and secure** way to handle account deletion:
 - ✅ Follows security best practices
 - ✅ Respects website terms of service
 
-### What PrivacyBlitz Helps With
+### What DataVoid Helps With
 
 - 🔍 **Finding** old accounts you forgot about
 - 📋 **Organizing** accounts with tags (Keep/Delete/Review)
@@ -62,7 +62,7 @@ This is the **correct and secure** way to handle account deletion:
 - 📚 **Searching** for deletion instructions when needed
 - 📊 **Tracking** which accounts you've reviewed
 
-### Think of PrivacyBlitz As...
+### Think of DataVoid As...
 
 - A **personal assistant** that finds your old accounts
 - A **directory** of deletion links
@@ -76,5 +76,5 @@ This is the **correct and secure** way to handle account deletion:
 
 ---
 
-**Bottom Line**: PrivacyBlitz helps you **find and organize** accounts, then **guides you** to delete them yourself. This is the secure and correct approach! 🔒
+**Bottom Line**: DataVoid helps you **find and organize** accounts, then **guides you** to delete them yourself. This is the secure and correct approach! 🔒
 

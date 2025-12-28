@@ -1,6 +1,6 @@
 # GitHub Profile Setup Guide
 
-## Steps to Make PrivacyBlitz Appear on Your GitHub Profile
+## Steps to Make DataVoid Appear on Your GitHub Profile
 
 ### 1. Create the Repository
 
@@ -12,7 +12,7 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "Initial commit: PrivacyBlitz Chrome Extension"
+git commit -m "Initial commit: DataVoid Chrome Extension"
 
 # Create repository on GitHub (via web interface)
 # Then connect:
@@ -49,7 +49,7 @@ Chrome extension to discover and delete forgotten online accounts. Reclaim your 
 
 1. Go to your GitHub profile page
 2. Click **Customize your pins**
-3. Select **PrivacyBlitz** repository
+3. Select **DataVoid** repository
 4. It will appear at the top of your profile
 
 ### 5. Add to Profile README (Optional)
@@ -59,7 +59,7 @@ Create `.github/profile/README.md` in your profile repository:
 ```markdown
 ## 🔥 Featured Project
 
-### ⚡ DataVoid (PrivacyBlitz)
+### ⚡ DataVoid
 Chrome extension for comprehensive digital privacy management. Discover forgotten accounts and reclaim your digital privacy.
 
 **Key Features:**
@@ -83,7 +83,7 @@ Chrome extension for comprehensive digital privacy management. Discover forgotte
 For documentation site:
 1. Go to **Settings** → **Pages**
 2. Select source: **main branch** → **/docs** folder
-3. Your docs will be available at: `https://yourusername.github.io/privacyblitz`
+3. Your docs will be available at: `https://yourusername.github.io/datavoid`
 
 ### 8. Add Badges to README
 
@@ -97,7 +97,7 @@ The README already includes badges, but you can customize:
 When ready to launch:
 1. Go to **Releases** → **Create a new release**
 2. Tag: `v1.0.0`
-3. Title: `PrivacyBlitz v1.0.0 - Initial Release`
+3. Title: `DataVoid v1.0.0 - Initial Release`
 4. Description: Release notes
 5. Attach `.zip` file of extension
 
@@ -120,7 +120,7 @@ Add social preview image:
 - [ ] Issues enabled
 - [ ] First release created (when ready)
 
-**Note:** Repository name should be `datavoid` (or `DataVoid`). The extension itself is still called "PrivacyBlitz" in the code.
+**Note:** Repository name should be `datavoid` (or `DataVoid`). The extension is called "DataVoid" throughout the codebase.
 
 ## Making It Stand Out
 
@@ -134,12 +134,12 @@ Add social preview image:
 
 ## Profile README Example
 
-If you want to add PrivacyBlitz to your profile README:
+If you want to add DataVoid to your profile README:
 
 ```markdown
 ## 🚀 Featured Projects
 
-### ⚡ [PrivacyBlitz](https://github.com/yourusername/privacyblitz)
+### ⚡ [DataVoid](https://github.com/yourusername/datavoid)
 Chrome extension for comprehensive digital privacy management. Discover forgotten accounts across 80+ websites and reclaim your digital privacy.
 
 **Tech Stack:** JavaScript, Chrome Extension API, Manifest V3
