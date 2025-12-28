@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create PrivacyBlitz Icons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        .icon {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ PrivacyBlitz Icon Creator</h1>
+        <p>Right-click each icon below and "Save image as" to create the PNG files:</p>
+        
+        <div id="icons"></div>
+        
+        <script>
+            function createIcon(size) {
+                const canvas = document.createElement('canvas');
+                canvas.width = size;
+                canvas.height = size;
+                const ctx = canvas.getContext('2d');
+                
+                // Create gradient background
+                const gradient = ctx.createLinearGradient(0, 0, size, size);
+                gradient.addColorStop(0, '#667eea');
+                gradient.addColorStop(1, '#764ba2');
+                
+                // Draw background circle
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(size/2, size/2, size/2 - 2, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Draw white border
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = Math.max(1, size/32);
+                ctx.stroke();
+                
+                // Draw lightning bolt
+                ctx.fillStyle = '#fff';
+                ctx.beginPath();
+                const scale = size / 128;
+                ctx.moveTo(45 * scale, 35 * scale);
+                ctx.lineTo(65 * scale, 35 * scale);
+                ctx.lineTo(55 * scale, 55 * scale);
+                ctx.lineTo(75 * scale, 55 * scale);
+                ctx.lineTo(50 * scale, 95 * scale);
+                ctx.lineTo(60 * scale, 75 * scale);
+                ctx.lineTo(40 * scale, 75 * scale);
+                ctx.closePath();
+                ctx.fill();
+                
+                // Draw shield outline
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = Math.max(1, size/64);
+                ctx.beginPath();
+                ctx.moveTo(64 * scale, 25 * scale);
+                ctx.lineTo(80 * scale, 35 * scale);
+                ctx.lineTo(80 * scale, 65 * scale);
+                ctx.quadraticCurveTo(80 * scale, 85 * scale, 64 * scale, 95 * scale);
+                ctx.quadraticCurveTo(48 * scale, 85 * scale, 48 * scale, 65 * scale);
+                ctx.lineTo(48 * scale, 35 * scale);
+                ctx.closePath();
+                ctx.stroke();
+                
+                return canvas;
+            }
+            
+            const sizes = [16, 48, 128];
+            const container = document.getElementById('icons');
+            
+            sizes.forEach(size => {
+                const div = document.createElement('div');
+                div.className = 'icon';
+                div.innerHTML = `<div>icon${size}.png</div>`;
+                div.appendChild(createIcon(size));
+                container.appendChild(div);
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Additional popup styles if needed */
+.popup-container {
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.account-item {
+  transition: all 0.2s ease;
+}
+
+.account-item:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.delete-guide-link {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.delete-guide-link:hover {
+  text-decoration: underline;
+}
+
+.old-account {
+  border-left: 3px solid #ff4757;
+}
+
+.recent-account {
+  border-left: 3px solid #2ed573;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  opacity: 0.8;
+}
+
+.no-results-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,32 @@
+/* Content script styles */
+.privacyblitz-indicator {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.privacyblitz-indicator:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Prevent interference with page styles */
+.privacyblitz-indicator * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

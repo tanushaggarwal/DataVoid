@@ -1,0 +1,26 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#grad1)" stroke="#fff" stroke-width="4"/>
+  
+  <!-- Lightning bolt for PrivacyBlitz -->
+  <path d="M 45 35 L 65 35 L 55 55 L 75 55 L 50 95 L 60 75 L 40 75 Z" fill="#fff"/>
+  
+  <!-- Shield for privacy -->
+  <path d="M 64 25 L 80 35 L 80 65 Q 80 85 64 95 Q 48 85 48 65 L 48 35 Z" 
+        stroke="#fff" stroke-width="3" fill="none"/>
+  
+  <!-- Data void effect - small circles representing data -->
+  <circle cx="30" cy="30" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="100" cy="40" r="1.5" fill="#fff" opacity="0.5"/>
+  <circle cx="25" cy="80" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="105" cy="90" r="2" fill="#fff" opacity="0.4"/>
+  <circle cx="40" cy="100" r="1.5" fill="#fff" opacity="0.5"/>
+  <circle cx="90" cy="25" r="1" fill="#fff" opacity="0.7"/>
+</svg>

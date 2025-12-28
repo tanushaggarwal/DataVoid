@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 480px;
+      min-height: 500px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      overflow-x: hidden;
+    }
+    
+    .header {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .tagline {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .scan-button {
+      width: 100%;
+      padding: 15px;
+      background: #3498db;
+      border: 2px solid #2980b9;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+    
+    .scan-button:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+    
+    .scan-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .results {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    
+    #accountList {
+      overflow-x: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px;
+      background: #34495e;
+      margin: 5px 0;
+      border-radius: 6px;
+      font-size: 14px;
+      border: 1px solid #2c3e50;
+      gap: 10px;
+      overflow: hidden;
+    }
+    
+    .domain {
+      font-weight: bold;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    .action-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .action-btn:hover {
+      background: #c0392b;
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
+    .stat-box {
+      background: #34495e;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #2c3e50;
+    }
+    
+    .stat-number {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .stat-label {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .spinner {
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top: 2px solid white;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .filter-tabs {
+      display: flex;
+      gap: 5px;
+    }
+    
+    .filter-btn {
+      padding: 6px 12px;
+      background: #34495e;
+      border: 1px solid #2c3e50;
+      border-radius: 6px;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      background: #3498db;
+      border-color: #2980b9;
+    }
+    
+    .tag-filter-btn {
+      padding: 4px 8px;
+      background: #34495e;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      color: white;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .tag-filter-btn:hover, .tag-filter-btn.active {
+      background: #27ae60;
+      border-color: #229954;
+    }
+    
+    .sort-select {
+      padding: 5px 10px;
+      background: #34495e;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    
+    .sort-select:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+    
+    .account-category {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    
+    .mark-deleted-btn {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .mark-deleted-btn:hover {
+      background: #229954;
+    }
+    
+    .undo-deleted-btn {
+      background: #95a5a6;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .undo-deleted-btn:hover {
+      background: #7f8c8d;
+    }
+    
+    .deleted-account {
+      opacity: 0.6;
+    }
+    
+    .bulk-actions {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-secondary {
+      background: #95a5a6;
+      color: white;
+      border: 1px solid #7f8c8d;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: #7f8c8d;
+    }
+    
+    .btn-danger {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-danger:hover {
+      background: #c0392b;
+    }
+    
+    .quick-actions {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .quick-actions h4 {
+      margin-bottom: 10px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    
+    .quick-btn {
+      background: #34495e;
+      border: 1px solid #2c3e50;
+      border-radius: 6px;
+      color: white;
+      padding: 10px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .quick-btn:hover {
+      background: #3498db;
+      border-color: #2980b9;
+    }
+    
+    .account-item {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .account-item:hover {
+      background: rgba(255,255,255,0.15);
+    }
+    
+    .account-checkbox {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+    }
+    
+    .account-content {
+      margin-left: 30px;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+    }
+    
+    .account-actions {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    
+    .visit-btn {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .visit-btn:hover {
+      background: #229954;
+    }
+    
+    .delete-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .delete-btn:hover {
+      background: #c0392b;
+    }
+    
+    .account-age {
+      font-size: 11px;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+    
+    .old-account {
+      border-left: 3px solid #e74c3c;
+    }
+    
+    .recent-account {
+      border-left: 3px solid #f39c12;
+    }
+    
+    .active-account {
+      border-left: 3px solid #27ae60;
+    }
+    
+    .search-container {
+      position: relative;
+      width: 100%;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 10px 35px 10px 15px;
+      background: #34495e;
+      border: 1px solid #2c3e50;
+      border-radius: 6px;
+      color: white;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    
+    .search-input::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: #3498db;
+      background: #3d5266;
+    }
+    
+    .clear-search-btn {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      padding: 5px 8px;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    
+    .clear-search-btn:hover {
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      opacity: 0.8;
+    }
+    
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    
+    .empty-state-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .empty-state-message {
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    
+    .error-state {
+      text-align: center;
+      padding: 30px 20px;
+      color: #ff6b6b;
+    }
+    
+    .error-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    
+    .error-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .error-message {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    .error-details {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+    
+    .account-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-left: 8px;
+      text-transform: uppercase;
+    }
+    
+    .tag-keep {
+      background: #27ae60;
+      color: white;
+    }
+    
+    .tag-delete {
+      background: #e74c3c;
+      color: white;
+    }
+    
+    .tag-review {
+      background: #f39c12;
+      color: white;
+    }
+    
+    .domain-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .tag-dropdown {
+      position: relative;
+    }
+    
+    .tag-btn {
+      background: #34495e;
+      border: 1px solid #2c3e50;
+      color: white;
+      padding: 5px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      min-width: 28px;
+    }
+    
+    .tag-btn:hover {
+      background: #3d5266;
+    }
+    
+    .tag-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #2c3e50;
+      border: 1px solid #34495e;
+      border-radius: 6px;
+      padding: 5px 0;
+      margin-top: 5px;
+      min-width: 120px;
+      z-index: 1000;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .tag-option {
+      display: block;
+      width: 100%;
+      padding: 8px 15px;
+      background: transparent;
+      border: none;
+      color: white;
+      text-align: left;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.2s;
+    }
+    
+    .tag-option:hover {
+      background: #34495e;
+    }
+    
+    .deletion-notes {
+      font-size: 11px;
+      opacity: 0.6;
+      margin-top: 4px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">⚡ PrivacyBlitz</div>
+    <div class="tagline">Find & Delete Old Accounts</div>
+  </div>
+  
+  <div class="content">
+    <button id="scanBtn" class="scan-button">
+      🔍 Scan for Old Accounts
+    </button>
+    
+    <div id="stats" class="stats" style="display: none;">
+      <div class="stat-box">
+        <div id="loginCount" class="stat-number">0</div>
+        <div class="stat-label">Login Sites</div>
+      </div>
+      <div class="stat-box">
+        <div id="accountCount" class="stat-number">0</div>
+        <div class="stat-label">Possible Accounts</div>
+      </div>
+    </div>
+    
+    <div id="loading" class="loading" style="display: none;">
+      <div class="spinner"></div>
+      <div>Scanning your digital footprint...</div>
+    </div>
+    
+    <div id="results" class="results" style="display: none;">
+      <div class="results-header">
+        <h3>Found Accounts</h3>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="old">Old (90+ days)</button>
+          <button class="filter-btn" data-filter="recent">Recent (30 days)</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="deleted">✓ Deleted</button>
+        </div>
+      </div>
+      
+      <div class="filter-controls" style="margin-bottom: 10px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <div class="tag-filters" style="display: flex; gap: 5px;">
+          <button class="tag-filter-btn active" data-tag="all">All Tags</button>
+          <button class="tag-filter-btn" data-tag="keep">✓ Keep</button>
+          <button class="tag-filter-btn" data-tag="delete">🗑️ Delete</button>
+          <button class="tag-filter-btn" data-tag="review">👁️ Review</button>
+        </div>
+        <select id="sortSelect" class="sort-select" style="padding: 5px 10px; background: #34495e; border: 1px solid #2c3e50; border-radius: 4px; color: white; font-size: 12px; cursor: pointer;">
+          <option value="date-desc">Sort: Newest First</option>
+          <option value="date-asc">Sort: Oldest First</option>
+          <option value="domain-asc">Sort: Domain A-Z</option>
+          <option value="domain-desc">Sort: Domain Z-A</option>
+          <option value="days-desc">Sort: Most Recent</option>
+          <option value="days-asc">Sort: Oldest</option>
+          <option value="category-asc">Sort: Category</option>
+        </select>
+      </div>
+      
+      <div class="search-container" style="margin-bottom: 15px;">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search accounts..." aria-label="Search accounts">
+        <button id="clearSearch" class="clear-search-btn" style="display: none;" aria-label="Clear search">✕</button>
+      </div>
+      
+      <div class="bulk-actions" id="bulkActions" style="display: none;">
+        <button id="selectAllBtn" class="btn-secondary">Select All</button>
+        <button id="bulkDeleteBtn" class="btn-danger">Bulk Delete Guide</button>
+        <button id="exportListBtn" class="btn-secondary">Export List</button>
+      </div>
+      
+      <div id="accountList"></div>
+      
+      <div class="quick-actions">
+        <h4>Quick Actions</h4>
+        <div class="action-grid">
+          <button class="quick-btn" id="gdprTemplateBtn">
+            📝 GDPR Template
+          </button>
+          <button class="quick-btn" id="privacyGuideBtn">
+            🔒 Privacy Guide
+          </button>
+          <button class="quick-btn" id="dataExportBtn">
+            📤 Data Export
+          </button>
+          <button class="quick-btn" id="settingsBtn">
+            ⚙️ Settings
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../utils/deletion-database.js"></script>
+  <script src="../utils/account-categorizer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
